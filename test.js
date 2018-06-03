@@ -1,3 +1,3 @@
 const knope = require('./knope.js')
-var compliment = knope.getCompliment('ben')
+var compliment = knope.getOfficialCompliment('Ann')
 console.log(compliment)
