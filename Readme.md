@@ -28,3 +28,12 @@ console.log(compliment)
 
 `````
 
+### Examples
+
+* Ann, you faithful hippopotamus.
+* Ann, you energized worm.
+* Ann, you self-disciplined boar.
+* Ann, you knowledgeable crocodile.
+* Ann, you pioneering lark.
+
+
