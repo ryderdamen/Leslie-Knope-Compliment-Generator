@@ -28,12 +28,32 @@ console.log(compliment)
 
 `````
 
-### Examples
+Some examples include:
 
 * Ann, you faithful hippopotamus.
 * Ann, you energized worm.
 * Ann, you self-disciplined boar.
 * Ann, you knowledgeable crocodile.
 * Ann, you pioneering lark.
+
+
+### Official Compliments
+If you'd like an official compliment straight from Leslie Knope herself, use the getOfficialCompliment('Ann') method the same as above.
+
+`````javascript
+const knope = require('knope')
+
+// Pass in the name as a parameter
+var compliment = knope.getOfficialCompliment('Ann')
+
+console.log(compliment)
+
+`````
+
+Some examples include:
+
+* Ann, you beautiful rule-breaking moth.
+* Ann, you beautiful, sassy mannequin come to life.
+* Ann, you beautiful tropical fish, you're smart as a whip, and cool under pressure.
 
 
