@@ -8,10 +8,11 @@ module.exports = {
 		// Generates a compliment in a loop
 		function generateCompliment(numAdjectives, oxfordComma) {
 			adjective = ""
+			original_numAdjectives = numAdjectives
 			while ( numAdjectives !== 0 ) {
 				if ( numAdjectives == 1 ) {
 					adjective = adjective + adjectives[Math.floor(Math.random() * adjectives.length)]
-					if ( oxfordComma ) {
+					if ( oxfordComma && original_numAdjectives != 1 ) {
 						adjective = adjective + ','
 					}
 				}
@@ -28,7 +29,7 @@ module.exports = {
 			adjective = generateCompliment(numAdjectives, oxfordComma)
 		}
 		else if (numAdjectives == 'random') { // Get a random number of adjectives between 2-5
-			rand = Math.floor(Math.random() * 5)
+			rand = Math.floor(Math.random() * 5) + 1
 			adjective = generateCompliment(rand, oxfordComma)
 		}
 		else { // Get just one
