@@ -1,6 +1,6 @@
 {
   "name": "knope",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A package to generate compliments like Parks and Rec's Leslie Knope.",
   "main": "knope.js",
   "scripts": {
