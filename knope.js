@@ -6,18 +6,25 @@ const officialCompliments = require('./officialCompliments.json')
 module.exports = {
 	getCompliment : function (name, numAdjectives = 1, oxfordComma = true) {
 		// Generates a compliment in a loop
+		// Create a mutable adjective variable
+		var mutableAdjectives = adjectives
 		function generateCompliment(numAdjectives, oxfordComma) {
 			adjective = ""
-			original_numAdjectives = numAdjectives
+			let original_numAdjectives = numAdjectives
 			while ( numAdjectives !== 0 ) {
 				if ( numAdjectives == 1 ) {
-					adjective = adjective + adjectives[Math.floor(Math.random() * adjectives.length)]
+					let newAdjective = mutableAdjectives[Math.floor(Math.random() * mutableAdjectives.length)]
+					// Remove the adjective from the array
+					let adjectiveIndex = mutableAdjectives.indexOf(newAdjective);
+					if (adjectiveIndex !== -1) mutableAdjectives.splice(adjectiveIndex, 1);
+
+					adjective = adjective + newAdjective
 					if ( oxfordComma && original_numAdjectives != 1 ) {
 						adjective = adjective + ','
 					}
 				}
 				else {
-					adjective = adjective + adjectives[Math.floor(Math.random() * adjectives.length)] + ', '
+					adjective = adjective + mutableAdjectives[Math.floor(Math.random() * mutableAdjectives.length)] + ', '
 				}
 				numAdjectives --
 			}
@@ -33,7 +40,7 @@ module.exports = {
 			adjective = generateCompliment(rand, oxfordComma)
 		}
 		else { // Get just one
-			adjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+			adjective = mutableAdjectives[Math.floor(Math.random() * mutableAdjectives.length)]
 		}
 		var animal = animals[Math.floor(Math.random() * animals.length)]
 		return name + ', you ' + adjective + ' ' + animal + '.'
@@ -45,10 +52,12 @@ module.exports = {
 	},
 	getComplimentWithAlliteration: function (name) {
 		// Returns a randomly generated animal, and a random adjective matching the first letter
+
+		var mutableAdjectives = adjectives
 		var animal = animals[Math.floor(Math.random() * animals.length)]
 		var letter = animal.charAt(0)
 		// Filter adjectives to ones that match
-		matchingAdjectives = adjectives.filter(function(word) {
+		matchingAdjectives = mutableAdjectives.filter(function(word) {
 			return word.charAt(0) == letter
 		})
 		var adjective = matchingAdjectives[Math.floor(Math.random() * matchingAdjectives.length)]
