@@ -36,7 +36,7 @@ Some examples include:
 * Ann, you knowledgeable crocodile.
 * Ann, you pioneering lark.
 
-### Extra Perks
+### Extra Perk(ins)
 You can pass in a few other parameters for a few more options. Pass in a number anywhere from 2-5 in the second parameter to get back that many adjectives. Instead of a number, you can also pass in the string 'random' to get a random (between 1 and 5) number of adjectives back.
 
 `````javascript
