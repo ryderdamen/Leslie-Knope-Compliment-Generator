@@ -1,4 +1,7 @@
 .gitignore
-.DS_Store
+.gitattributes
+**/.DS_Store
 Readme.md
 assets
+tests
+node_modules
