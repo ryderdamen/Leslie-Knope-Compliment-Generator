@@ -1,6 +1,6 @@
-# Leslie Knope Compliment Generator
-
 [![NPM version](https://badge.fury.io/js/knope.svg)](http://badge.fury.io/js/knope)
+[![CircleCI](https://circleci.com/gh/ryderdamen/Leslie-Knope-Compliment-Generator.svg?style=shield)](https://circleci.com/gh/ryderdamen/Leslie-Knope-Compliment-Generator)
+# Leslie Knope Compliment Generator
 
 A node.js package to generate compliments like Parks and Rec's Leslie Knope.
 
